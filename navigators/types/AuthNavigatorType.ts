@@ -4,6 +4,7 @@ import {RouteProp} from "@react-navigation/native";
 export type AuthNavParamList = {
    Login: undefined;
    Register: undefined;
+   Biometric: undefined;
 }
 
 export type AuthNavProps<AuthNavRoutes extends keyof AuthNavParamList> = {
