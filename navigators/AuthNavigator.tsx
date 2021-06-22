@@ -8,7 +8,7 @@ import {BiometricScreen} from "../screens/auths/BiometricScreen";
 const Stack = createStackNavigator<AuthNavParamList>();
 
 export const AuthNavigator: React.FunctionComponent = () => {
-   const biometric = true
+   const biometric = false
    let initialRoute: keyof AuthNavParamList = "Login"
    if (biometric) {
       initialRoute = "Biometric"

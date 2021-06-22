@@ -4,7 +4,8 @@ import { DashboardNavigator } from "./DashboardNavigator";
 import { MainTabsNavParamList } from "./types/MainTabsNavigatorType";
 import { SettingNavigator } from "./SettingNavigator";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import {ChatNavigator} from "./ChatNavigator";
 
 const Tab = createMaterialBottomTabNavigator<MainTabsNavParamList>();
 
@@ -17,6 +18,15 @@ export const MainTabsNavigator: React.FunctionComponent = () => {
             options={{
                tabBarIcon: ({color}) => (
                   <MaterialIcons name="home-filled" size={24} color={color} />
+               ),
+            }}
+         />
+         <Tab.Screen
+            name={"Chat"}
+            component={ChatNavigator}
+            options={{
+               tabBarIcon: ({color}) => (
+                  <MaterialCommunityIcons name="chat" size={24} color={color} />
                ),
             }}
          />
