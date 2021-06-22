@@ -1,0 +1,9 @@
+{
+  "Welcome to React": "Welcome to React!",
+  "Required": "Required!!",
+  "username": "username",
+  "password": "password",
+  "login": "Login",
+  "register": "Register",
+  "invalid username or password": "Username or password is invalid"
+}

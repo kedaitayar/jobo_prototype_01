@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet } from "react-native";
+import "./i18n/config";
+import { NavigationContainer } from "@react-navigation/native";
+import { DashboardNavigator } from "./navigators/DashboardNavigator";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+import { Routes } from "./navigators/Routes";
+import { Theme } from "react-native-paper/lib/typescript/types";
+import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
+
+const theme: Theme = {
+   ...DefaultTheme,
+};
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+   return (
+      <Provider store={store}>
+         <PaperProvider theme={theme}>
+            <Routes />
+         </PaperProvider>
+      </Provider>
+   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});
