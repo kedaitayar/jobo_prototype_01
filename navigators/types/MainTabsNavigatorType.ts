@@ -3,6 +3,7 @@ import {RouteProp} from "@react-navigation/native";
 
 export type MainTabsNavParamList = {
    Dashboard: undefined;
+   Chat: undefined;
    Setting: undefined;
 }
 
